@@ -14,13 +14,17 @@ class MainHome : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_home)
 
+        //creo las variables de los botones y lo texview
         var botoncesion: Button =findViewById(R.id.btn_cesion)
+
         var bienvenida: TextView=findViewById(R.id.textHome)
+        //creo una variable bundle donde recibo mi usuario
         val bundle=intent.extras
-        val dato=bundle?.getString("USUARIO")
+        val dato=bundle?.getString("USUARIO")//recibo el usuario haciendo referencia a la palabra clave
 
 
-        bienvenida.text="Bienvenido ¡${dato}! Carrefour."
+        //mensaje de bienevenida hacienod referencia la usuario
+        bienvenida.text="Bienvenido ¡${dato}! a Carrefour."
 
         botoncesion.setOnClickListener {
             finish()
@@ -28,11 +32,14 @@ class MainHome : AppCompatActivity() {
 
     }
 
+    //funcion para dirigirme a la activity AgregarProducto
     fun btn_agragarpro(view: android.view.View) {
         val intent = Intent(this, AgregarProducto:: class.java)
         startActivity(intent)
+
     }
 
+    //funcion para dirigirme a la activity MostarProducto
     fun btn_mostrarpro(view: android.view.View) {
         val intent = Intent(this, MostrarProducto:: class.java)
         startActivity(intent)

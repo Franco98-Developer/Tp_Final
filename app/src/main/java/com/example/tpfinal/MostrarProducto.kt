@@ -28,8 +28,8 @@ class MostrarProducto : AppCompatActivity() {
         arrayAdapter= ArrayAdapter(this,android.R.layout.simple_list_item_1,list)
         listaProducto.adapter=arrayAdapter
 
+        //llamo a la funcion Recibir datos para que se guarde a la lista precargada
         list.add(recibirDatos())
-
 
         btncerrar.setOnClickListener {
             finish()
@@ -37,8 +37,9 @@ class MostrarProducto : AppCompatActivity() {
 
     }
     fun recibirDatos():String{
+        //creo la variable en la que voy a recibir el objeto Producto
         val producto=intent.getParcelableExtra<Producto>("producto")
-        var tvPro: TextView=findViewById(R.id.textViewLista)
+
         if (producto!=null){
             return "      ${producto.nombre}                  ${producto.stock}        $${producto.precio}"
 

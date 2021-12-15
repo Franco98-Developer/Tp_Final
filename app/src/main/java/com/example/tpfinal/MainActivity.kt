@@ -10,11 +10,19 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
+
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
 
         //Se establece el Administrador por Defecto
         var administrador = Admin("Administrador", "1234","Franco","Fernandez")
@@ -27,9 +35,7 @@ class MainActivity : AppCompatActivity() {
         val ad: EditText= findViewById(R.id.editTextTextUsu)
         val pass:EditText=findViewById(R.id.editTextPass)
         val botonExit: Button=findViewById(R.id.btnfinalizar)
-        var test=findViewById<TextView>(R.id.textView3)
-
-        test.text=administrador.Aviso()
+        val btnUser: Button=findViewById(R.id.btn_iniciar2)
 
         var validar = false
 
@@ -83,10 +89,14 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, "${administrador.Aviso()}", Toast.LENGTH_SHORT).show()
             }
         }
+        btnUser.setOnClickListener {
+            val intent = Intent(this, LoginUser:: class.java)
+            startActivity(intent)
+            Toast.makeText(this, "Estas en El login del Usuario", Toast.LENGTH_SHORT).show()
+        }
+
         botonExit.setOnClickListener {
             finish()
         }
     }
-
-
 }

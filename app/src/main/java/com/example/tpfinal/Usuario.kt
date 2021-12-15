@@ -4,15 +4,14 @@ import android.os.Build
 import android.os.Parcel
 import android.os.Parcelable
 import androidx.annotation.RequiresApi
-import javax.xml.transform.Source
 
-data class Producto(var nombre:String,var stock:String,var precio:String):Parcelable{
+data class Usuario (var username:String,var pass:String,var dni:String=""):Parcelable{
     companion object{
-        @JvmField val CREATOR: Parcelable.Creator<Producto> = object : Parcelable.Creator<Producto>{
-            override fun newArray(size: Int): Array<Producto?> = arrayOfNulls(size)
+        @JvmField val CREATOR: Parcelable.Creator<Usuario> = object : Parcelable.Creator<Usuario>{
+            override fun newArray(size: Int): Array<Usuario?> = arrayOfNulls(size)
 
             @RequiresApi(Build.VERSION_CODES.Q)
-            override fun createFromParcel(source: Parcel): Producto=Producto(source)
+            override fun createFromParcel(source: Parcel): Usuario=Usuario(source)
         }
     }
     @RequiresApi(Build.VERSION_CODES.Q)
@@ -25,9 +24,9 @@ data class Producto(var nombre:String,var stock:String,var precio:String):Parcel
     @RequiresApi(Build.VERSION_CODES.Q)
     override fun writeToParcel(dest: Parcel?, flags: Int) {
         dest?.let{
-            dest.writeString(nombre)
-            dest.writeString(precio)
-            dest.writeString(stock)
+            dest.writeString(username)
+            dest.writeString(pass)
+            dest.writeString(dni)
         }
     }
     override fun describeContents(): Int=0

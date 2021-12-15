@@ -11,8 +11,6 @@ class Admin (var usu:String,var contraseña:String,nombre:String,apellido:String
     }
 
     override fun Aviso():String {
-
         return ("${Nombre} usted esta entrando en un perfil de administrador.")
     }
-
 }

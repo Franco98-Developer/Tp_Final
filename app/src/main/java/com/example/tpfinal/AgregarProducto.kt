@@ -38,17 +38,14 @@ class AgregarProducto : AppCompatActivity() {
 
         Toast.makeText(this,"¡¡Producto: ${Producto1.nombre} Cargado con exito..!!",Toast.LENGTH_SHORT).show()
 
+        //validar si los campos estan vacios
         if(ConPrecio.isEmpty()||ConNom.isEmpty()||ConStock.isEmpty()){
             Toast.makeText(this,"Por favor complete los campos requeridos.", Toast.LENGTH_SHORT).show()
         }
         else{
-            //creo un objeto y ingreso el nombre de la nueva pantalla
             val intent = Intent(this, MostrarProducto :: class.java)
 
-            //envio los datos a la activity MostrarProducto
-
-
-
+            //envio el objeto a la activity MostrarProducto
             intent.putExtra("producto",Producto1)
             startActivity(intent)
             finish()

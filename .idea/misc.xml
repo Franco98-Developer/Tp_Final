@@ -5,8 +5,12 @@
       <map>
         <entry key="..\:/Users/franc/AndroidStudioProjects/TpFinal/app/src/main/res/layout/activity_agregar_producto.xml" value="0.19157608695652173" />
         <entry key="..\:/Users/franc/AndroidStudioProjects/TpFinal/app/src/main/res/layout/activity_descuento.xml" value="0.16893115942028986" />
+        <entry key="..\:/Users/franc/AndroidStudioProjects/TpFinal/app/src/main/res/layout/activity_lista_producto.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/franc/AndroidStudioProjects/TpFinal/app/src/main/res/layout/activity_listade_productos.xml" value="0.19010416666666666" />
+        <entry key="..\:/Users/franc/AndroidStudioProjects/TpFinal/app/src/main/res/layout/activity_login_user.xml" value="0.19293478260869565" />
         <entry key="..\:/Users/franc/AndroidStudioProjects/TpFinal/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/franc/AndroidStudioProjects/TpFinal/app/src/main/res/layout/activity_main_home.xml" value="0.25" />
+        <entry key="..\:/Users/franc/AndroidStudioProjects/TpFinal/app/src/main/res/layout/activity_main_user.xml" value="0.19010416666666666" />
         <entry key="..\:/Users/franc/AndroidStudioProjects/TpFinal/app/src/main/res/layout/activity_mostrar_producto.xml" value="0.25" />
         <entry key="..\:/Users/franc/AndroidStudioProjects/TpFinal/app/src/main/res/layout/activity_registro.xml" value="0.25" />
       </map>
